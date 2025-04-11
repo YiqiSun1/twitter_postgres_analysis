@@ -1,5 +1,5 @@
 # Twitter in Postgres
-[![](https://github.com/Yiqisun1/twitter_postgres_analysis/workflows/tests_denormalized/badge.svg)](https://github.com/Yiqisun1/twitter_postgres_analysis/actions?query=workflow%3Atests)
+[![](https://github.com/Yiqisun1/twitter_postgres_analysis/workflows/tests_denormalized/badge.svg)](https://github.com/Yiqisun1/twitter_postgres_analysis/actions?query=workflow%3Atests_denormalized)
 [![](https://github.com/Yiqisun1/twitter_postgres_analysis/workflows/tests_normalized/badge.svg)](https://github.com/Yiqisun1/twitter_postgres_analysis/actions?query=workflow%3Atests)
 
 You will repeat the Twitter/MapReduce assignment using Postgres.
