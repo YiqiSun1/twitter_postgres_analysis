@@ -155,14 +155,14 @@ def insert_tweet(connection,tweet):
             ''')
 
         res = connection.execute(sql,{
-              'id_users' : remove_nulls(tweet['user']['id'])
+              'id_users' : tweet['user']['id']
             , 'created_at' : remove_nulls(tweet['user']['created_at'])
-            , 'updated_at' :  remove_nulls(tweet['created_at'])
+            , 'updated_at' :remove_nulls(tweet['created_at'])
             , 'id_urls' : remove_nulls(user_id_urls)
-            , 'friends_count' :  remove_nulls(tweet['user']['friends_count'])
-            , 'listed_count' :  remove_nulls(tweet['user']['listed_count'])
-            , 'favourites_count' : remove_nulls(tweet['user']['favourites_count'])
-            , 'statuses_count' : remove_nulls(tweet['user']['statuses_count'])
+            , 'friends_count' : tweet['user']['friends_count']
+            , 'listed_count' :  tweet['user']['listed_count'])
+            , 'favourites_count' :tweet['user']['favourites_count']
+            , 'statuses_count' : tweet['user']['statuses_count']
             , 'protected' : remove_nulls(tweet['user']['protected'])
             , 'verified' : remove_nulls(tweet['user']['verified'])
             , 'screen_name' : remove_nulls(tweet['user']['screen_name'])
