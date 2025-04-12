@@ -161,7 +161,7 @@ def insert_tweet(connection,tweet):
             , 'id_urls' : remove_null(user_id_urls)
             , 'friends_count' :  remove_null(tweet['user']['friends_count'])
             , 'listed_count' :  remove_null(tweet['user']['listed_count'])
-            , 'favourites_count' : remove_null(tweet['user']['favourites_count')]
+            , 'favourites_count' : remove_null(tweet['user']['favourites_count'])
             , 'statuses_count' : remove_null(tweet['user']['statuses_count'])
             , 'protected' : remove_null(tweet['user']['protected'])
             , 'verified' : remove_null(tweet['user']['verified'])
