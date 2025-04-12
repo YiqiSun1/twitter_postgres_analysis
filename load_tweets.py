@@ -160,7 +160,7 @@ def insert_tweet(connection,tweet):
             , 'updated_at' :remove_nulls(tweet['created_at'])
             , 'id_urls' : remove_nulls(user_id_urls)
             , 'friends_count' : tweet['user']['friends_count']
-            , 'listed_count' :  tweet['user']['listed_count'])
+            , 'listed_count' :  tweet['user']['listed_count']
             , 'favourites_count' :tweet['user']['favourites_count']
             , 'statuses_count' : tweet['user']['statuses_count']
             , 'protected' : remove_nulls(tweet['user']['protected'])
