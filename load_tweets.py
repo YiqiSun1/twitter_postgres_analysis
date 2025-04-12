@@ -153,7 +153,7 @@ def insert_tweet(connection,tweet):
                     ON CONFLICT DO NOTHING
                     ''')
 
-            res = connection.execute(sql,{
+        res = connection.execute(sql,{
               'id_users' : tweet['user']['id']
             , 'created_at' : tweet['user']['created_at']
             , 'updated_at' : tweet['created_at']
