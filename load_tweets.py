@@ -163,8 +163,8 @@ def insert_tweet(connection,tweet):
             , 'listed_count' :  tweet['user']['listed_count']
             , 'favourites_count' :tweet['user']['favourites_count']
             , 'statuses_count' : tweet['user']['statuses_count']
-            , 'protected' : remove_nulls(tweet['user']['protected'])
-            , 'verified' : remove_nulls(tweet['user']['verified'])
+            , 'protected' : tweet['user']['protected']
+            , 'verified' : tweet['user']['verified']
             , 'screen_name' : remove_nulls(tweet['user']['screen_name'])
             , 'name' : remove_nulls(tweet['user']['name'])
             , 'location' : remove_nulls(tweet['user']['location'])
