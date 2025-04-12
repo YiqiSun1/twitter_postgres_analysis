@@ -156,9 +156,9 @@ def insert_tweet(connection,tweet):
 
         res = connection.execute(sql,{
               'id_users' : tweet['user']['id']
-            , 'created_at' : remove_nulls(tweet['user']['created_at'])
-            , 'updated_at' :remove_nulls(tweet['created_at'])
-            , 'id_urls' : remove_nulls(user_id_urls)
+            , 'created_at' :tweet['user']['created_at']
+            , 'updated_at' :tweet['created_at']
+            , 'id_urls' : user_id_urls
             , 'friends_count' : tweet['user']['friends_count']
             , 'listed_count' :  tweet['user']['listed_count']
             , 'favourites_count' :tweet['user']['favourites_count']
