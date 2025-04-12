@@ -280,6 +280,7 @@ def insert_tweet(connection,tweet):
         )
         ON CONFLICT DO NOTHING
                                 ''')
+
         res = connection.execute(sql, {
               'id_tweets' : tweet['id']
             , 'id_users' : tweet['user']['id']
@@ -292,12 +293,12 @@ def insert_tweet(connection,tweet):
             , 'quote_count' : tweet.get('quote_count', None)
             , 'withheld_copyright': tweet.get('withheld_copyright', False)
             , 'withheld_in_countries' : tweet.get('withheld_in_cou    ntries', [])
-            , 'source' : tweet.get('source')
-            , 'text' : text
+            , 'source' : remove_nulls(tweet.get('source'))
+            , 'text' : remove_nulls(text)
             , 'country_code' : country_code
             , 'state_code' : state_code
-            , 'lang' : tweet['lang']
-            , 'place_name' : place_name
+            , 'lang' : remove_nulls(tweet['lang'])
+            , 'place_name' : remove_nulls(place_name)
             , 'geo' : None # should be geo_str + geo_coords
         }
         )         
